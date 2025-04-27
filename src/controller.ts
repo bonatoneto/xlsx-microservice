@@ -3,9 +3,9 @@ import { redisClient } from './redis.js';
 import { Request, Response } from 'express';
 import * as XLSX from 'xlsx';
 
-const EMAIL_API_URL = process.env.EMAIL_API_URL // 'http://localhost:5001/disparar-email'; 
+const EMAIL_API_URL = process.env.EMAIL_API_URL //'http://localhost:5001/disparar-email'; 
 const CACHE_KEY = 'e-mail--cache';
-const CACHE_EXP = 60 * 1000;
+const CACHE_EXP = 60 * 1000; // 1 minute
 
 interface EmailData {
   campanha: string;
